@@ -1,6 +1,12 @@
+/* eslint-disable import/order */
+/* eslint-disable import/first */
+/* eslint-disable import/newline-after-import */
+/* eslint-disable no-unused-vars */
 /* eslint-disable global-require */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const WebpackLighthousePlugin = require('webpack-lighthouse-plugin');
+// import { WebpackLighthousePlugin } from 'webpack-lighthouse-plugin';
 
 module.exports = {
   entry: './src/index.js',
@@ -12,6 +18,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+    // new WebpackLighthousePlugin({
+    //   url: 'http://localhost:8080/webpack-dev-server/',
+    // }),
   ],
   output: {
     filename: 'main.js',

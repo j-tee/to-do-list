@@ -55,13 +55,13 @@ const list = () => {
   todoList.forEach((task) => {
     const todo = `
     <li class="list-items">
-    <span>
-    <input type="checkbox" value=${task.completed} /> ${task.description}
-    </span>
-    <span id=${task.index} class="task-action">
-    <i data-visible="true" class="bi bi-three-dots-vertical ${task.index}\"></i>
-    <i data-visible="false" class="bi bi-trash ${task.index}\"></i>
-    </span> 
+      <span>
+        <input type="checkbox" value=${task.completed} /> ${task.description}
+      </span>
+      <span id=${task.index} class="task-action">
+        <i data-visible="true" class="bi bi-three-dots-vertical ${task.index}\"></i>
+        <i data-visible="false" class="bi bi-trash ${task.index}\"></i>
+      </span> 
     </li>`;
     element.insertAdjacentHTML('beforeend', todo);
   });

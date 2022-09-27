@@ -37,8 +37,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-- GitHub: [@ouasamine](https://github.com/j-tee)
-- Twitter: [@ouass_amine](https://twitter.com/JuliusTee)
+- GitHub: [@j-tee](https://github.com/j-tee)
+- Twitter: [@JuliusTee](https://twitter.com/JuliusTee)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/julius-tetteh-0121ab7b)
 
 

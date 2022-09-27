@@ -10,7 +10,7 @@ ul {
   flex-direction: column;
   list-style: none;
   width: fit-content;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 3rem;
   padding-left: 0;
   box-shadow: 2px 2px 2px 2px #dcdada;
@@ -37,10 +37,9 @@ i[data-visible="false"] {
 
 button {
   margin: 0;
-
 }
 
-.list-btn{
+.list-btn {
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;
@@ -62,7 +61,6 @@ button {
   justify-content: center;
   background-color: #f1f1f1;
 }
-
 
 .todo-list div {
   display: flex;

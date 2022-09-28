@@ -4,7 +4,6 @@
 import _ from 'lodash';
 import './styles.css';
 // eslint-disable-next-line no-unused-vars
-import * as bootstrap from 'bootstrap';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 

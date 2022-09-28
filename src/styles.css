@@ -23,7 +23,6 @@ ul li {
   justify-content: space-between;
 }
 
-
 ul li:last-child {
   padding: 0;
   border-bottom: #f1f1f1;
@@ -43,7 +42,7 @@ i {
   margin-top: 0;
   border-color: white;
   margin-bottom: 0;
-  padding: 1rem
+  padding: 1rem;
 }
 
 i[data-visible="false"] {

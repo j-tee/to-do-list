@@ -23,7 +23,7 @@ ul li {
   justify-content: space-between;
 }
 
-ul li:last-child {
+last-item {
   padding: 0;
   border-bottom: #f1f1f1;
 }
@@ -85,4 +85,10 @@ button {
   display: flex;
   justify-content: space-between;
   width: 50vw;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
 }

@@ -9,10 +9,22 @@
   <body>
     <div class="todo-list">
       <ul id="tasks">
-        <li class="list-title"><h4>Today's To Do</h4> <span>
-          <i class="bi bi-arrow-counterclockwise"></i></span></li>
-          <li><input id="input-field" class="info" type="text" placeholder="Add your list here..." /></li>
-  
+        <li class="list-title">
+          <h4>Today's To Do</h4>
+          <span> <i class="bi bi-arrow-counterclockwise"></i></span>
+        </li>
+        <form name="task" action="#">
+          <li class="form-field">
+            <input
+              name="description"
+              id="input-field"
+              class="info"
+              type="text"
+              placeholder="Add your list here..."
+            />
+            <i class="bi bi-arrow-counterclockwise" id="add-btn"></i>
+          </li>
+        </form>
       </ul>
     </div>
   </body>

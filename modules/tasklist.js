@@ -15,11 +15,11 @@ class TaskList {
   }
 
   storeData = (tasks) => {
-    localStorage.setItem(tasks, 'tasklist');
+    localStorage.setItem('tasklist', JSON.stringify(tasks));
   }
 
   getTasks = () => {
-    this.tasks = localStorage.getItem('tasklist');
+    this.tasks = JSON.parse(localStorage.getItem('tasklist'));
     if (this.tasks) {
       return this.tasks;
     }
@@ -43,9 +43,8 @@ class TaskList {
 
   removeTask = (id) => {
     this.tasks = this.getTasks();
-    this.tasks.filter((task) => task.index !== id);
+    this.tasks = this.tasks.filter((task) => parseInt(task.index, 10) !== parseInt(id, 10));
     this.generateIndex(this.tasks);
-    this.getTasks();
   }
 
   generateIndex = (tasks) => {
@@ -56,9 +55,9 @@ class TaskList {
   }
 
   addNewTask = (task) => {
+    this.tasks = this.getTasks();
     this.tasks.push(task);
     this.generateIndex(this.tasks);
-    this.getTasks();
   }
 }
 

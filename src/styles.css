@@ -5,6 +5,25 @@
   padding: 0;
 }
 
+body {
+  background-color: #f1f1f1;
+}
+
+#add-btn {
+  flex: 1;
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+  display: flex;
+}
+
+form input {
+  width: 100%;
+  flex-grow: 1;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -23,7 +42,7 @@ ul li {
   justify-content: space-between;
 }
 
-last-item {
+.last-item {
   padding: 0;
   border-bottom: #f1f1f1;
 }
@@ -33,7 +52,7 @@ last-item {
 }
 
 i {
-  color: #c3c3c3;
+  color: black;
 }
 
 .btn-clear {
@@ -78,13 +97,17 @@ button {
 
 .todo-list div {
   display: flex;
-  width: fit-content;
+  width: 50vw;
+  padding: 1rem 0 1rem 0.5rem;
+}
+
+#refresh-btn {
+  cursor: pointer;
 }
 
 .list-title {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
 }
 
 .form-field {

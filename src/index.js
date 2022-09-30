@@ -11,9 +11,11 @@ import _ from 'lodash';
 import './styles.css';
 // eslint-disable-next-line no-unused-vars
 import * as bootstrap from 'bootstrap';
-import { TaskList } from '../modules/tasklist.js';
-import { Task } from '../modules/task.js';
+import { TaskList } from './modules/tasklist.js';
+import { Task } from './modules/task.js';
 import '@fortawesome/fontawesome-free/js/all.js';
+import { addNewTask } from './modules/add.js';
+import { deleteTask } from './modules/delete.js';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -37,8 +39,7 @@ todoList.forEach((task) => {
 
   const removeBtn = document.getElementById(`trash-${task.index}`);
   removeBtn.addEventListener('click', () => {
-    const tasklist = new TaskList();
-    tasklist.removeTask(parseInt(removeBtn.id.substring(6), 10));
+    deleteTask(parseInt(removeBtn.id.substring(6), 10));
   });
 });
 
@@ -53,8 +54,7 @@ const spans = document.querySelectorAll('.task-action');
       const visibility = btn.getAttribute('data-visible');
       if (btn.id.substring(0, 5) === 'trash') {
         btn.addEventListener('click', () => {
-          const tasklist = new TaskList();
-          tasklist.removeTask(parseInt(btn.id.substring(6), 10));
+          deleteTask(parseInt(btn.id.substring(6), 10));
           location.reload();
         });
       }
@@ -71,8 +71,7 @@ const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click', () => {
   const description = document.forms.task.description.value;
   const task = new Task(0, description, false);
-  const tasklist = new TaskList();
-  tasklist.addNewTask(task);
+  addNewTask(task);
   location.reload();
 });
 
@@ -94,9 +93,8 @@ const deletelist = [];
 
 const deleteBtn = document.getElementById('btn-delete');
 deleteBtn.addEventListener('click', () => {
-  const tasklist = new TaskList();
   deletelist.forEach((id) => {
-    tasklist.removeTask(id);
+    deleteTask(id);
   });
   location.reload();
 });

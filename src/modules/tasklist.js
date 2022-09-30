@@ -11,7 +11,7 @@ import { Task } from './task.js';
 
 class TaskList {
   constructor() {
-    this.tasks = [];
+    this.tasks = [...this.getTasks()];
   }
 
   storeData = (tasks) => {
@@ -35,10 +35,11 @@ class TaskList {
   updateTask = (task) => {
     this.tasks = this.getTasks();
     this.tasks.forEach((_task, index) => {
-      this.tasks.splice(index, 1, task);
+      if (task.index === index + 1) {
+        this.tasks.splice(index, 1, task);
+      }
     });
     this.storeData(this.tasks);
-    this.getTasks();
   }
 
   removeTask = (id) => {
@@ -55,6 +56,10 @@ class TaskList {
   }
 
   addNewTask = (task) => {
+    if (task.index > 0) {
+      this.updateTask(task);
+      return;
+    }
     this.tasks = this.getTasks();
     this.tasks.push(task);
     this.generateIndex(this.tasks);

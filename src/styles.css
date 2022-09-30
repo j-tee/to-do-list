@@ -68,6 +68,10 @@ i[data-visible="false"] {
   display: none;
 }
 
+span[data-visible="false"] {
+  display: none;
+}
+
 button {
   margin: 0;
 }

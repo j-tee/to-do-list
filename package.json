@@ -1,36 +1,52 @@
 {
-  "name": "todo-list",
+  "name": "todolist",
   "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "server": "node server.js",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/j-tee/webpack-project.git"
+    "url": "git+https://github.com/j-tee/to-do-list.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/j-tee/webpack-project/issues"
+    "url": "https://github.com/j-tee/to-do-list/issues"
   },
-  "homepage": "https://github.com/j-tee/webpack-project#readme",
+  "homepage": "https://github.com/j-tee/to-do-list#readme",
   "devDependencies": {
-    "css-loader": "^6.7.1",
-    "express": "^4.18.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.5",
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.3",
+    "hint": "^6.1.9",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.5",
     "style-loader": "^3.3.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-middleware": "^5.3.3",
-    "webpack-dev-server": "^4.11.1"
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
   },
   "dependencies": {
+    "bootstrap": "^5.0.1",
+    "bootstrap-icons": "^1.9.1",
+    "font-awesome": "^4.7.0",
     "lodash": "^4.17.21"
   }
 }

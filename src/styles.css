@@ -1,7 +1,125 @@
-.hello {
-    color: red;
-  }
+@import "/node_modules/bootstrap/dist/css/bootstrap.css";
 
-  body {
-    background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#add-btn {
+  flex: 1;
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+  display: flex;
+}
+
+form input {
+  width: 100%;
+  flex-grow: 1;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: fit-content;
+  background-color: #fff;
+  margin-top: 5rem;
+  padding-left: 0;
+  box-shadow: 2px 2px 2px 2px #dcdada;
+}
+
+ul li {
+  padding: 1rem;
+  border-bottom: 2px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-item {
+  padding: 0;
+  border-bottom: #f1f1f1;
+}
+
+.list-items input {
+  margin-right: 0.5rem;
+}
+
+i {
+  color: black;
+}
+
+.btn-clear {
+  width: 50vw;
+  background-color: white;
+  margin-top: 0;
+  border-color: white;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+i[data-visible="false"] {
+  display: none;
+}
+
+span[data-visible="false"] {
+  display: none;
+}
+
+button {
+  margin: 0;
+}
+
+.list-btn {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  font-style: italic;
+  border: 0;
+}
+
+.info:focus {
+  outline: none;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.todo-list div {
+  display: flex;
+  width: 50vw;
+  padding: 1rem 0 1rem 0.5rem;
+}
+
+#refresh-btn {
+  cursor: pointer;
+}
+
+.list-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+#btn-delete {
+  border: 0;
 }

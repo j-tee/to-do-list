@@ -15,6 +15,9 @@ class TaskList {
   }
 
   storeData = (tasks) => {
+    tasks.forEach((task, index) => {
+      task.index = index + 1;
+    });
     localStorage.setItem('tasklist', JSON.stringify(tasks));
   }
 
@@ -42,18 +45,24 @@ class TaskList {
     this.storeData(this.tasks);
   }
 
+  removeTaskCompleted = () => {
+    this.tasks = this.getTasks();
+    this.tasks = this.tasks.filter((task) => !task.completed);
+    this.storeData(this.tasks);
+  }
+
   removeTask = (id) => {
     this.tasks = this.getTasks();
     this.tasks = this.tasks.filter((task) => parseInt(task.index, 10) !== parseInt(id, 10));
-    this.generateIndex(this.tasks);
+    this.storeData(this.tasks);
   }
 
-  generateIndex = (tasks) => {
-    tasks.forEach((task, index) => {
-      task.index = index + 1;
-    });
-    this.storeData(tasks);
-  }
+  // generateIndex = (tasks) => {
+  //   tasks.forEach((task, index) => {
+  //     task.index = index + 1;
+  //   });
+  //   //this.storeData(tasks);
+  // }
 
   addNewTask = (task) => {
     if (task.index > 0) {
@@ -62,7 +71,7 @@ class TaskList {
     }
     this.tasks = this.getTasks();
     this.tasks.push(task);
-    this.generateIndex(this.tasks);
+    this.storeData(this.tasks);
   }
 }
 

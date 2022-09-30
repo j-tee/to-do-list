@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable import/extensions */
+/* eslint-disable linebreak-style */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-empty */
 /* eslint-disable linebreak-style */
@@ -16,6 +18,7 @@ import { Task } from './modules/task.js';
 import '@fortawesome/fontawesome-free/js/all.js';
 import { addNewTask } from './modules/add.js';
 import { deleteTask } from './modules/delete.js';
+import { completed, deleteCompletedTasks } from './modules/statusUpdate';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -96,23 +99,13 @@ const checkBoxInputs = document.querySelectorAll('.checkbox-inputs');
 const deletelist = [];
 [...checkBoxInputs].forEach((btn) => {
   btn.addEventListener('change', (event) => {
-    if (btn.checked) {
-      deletelist.push(parseInt(btn.id, 10));
-    } else {
-      deletelist.forEach((num, index) => {
-        if (parseInt(btn.id, 10) === num) {
-          deletelist.splice(index, 1);
-        }
-      });
-    }
+    completed(btn.checked, btn.id);
   });
 });
 
 const deleteBtn = document.getElementById('btn-delete');
 deleteBtn.addEventListener('click', () => {
-  deletelist.forEach((id) => {
-    deleteTask(id);
-  });
+  deleteCompletedTasks();
   location.reload();
 });
 

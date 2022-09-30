@@ -10,6 +10,9 @@
 - HTML 5 / Css 3
 - Javascript
 
+## Live demo
+[live demo](https://j-tee.github.io/to-do-list/dist)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

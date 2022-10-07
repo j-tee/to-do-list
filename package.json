@@ -30,6 +30,7 @@
   "homepage": "https://github.com/j-tee/to-do-list#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.5",
+    "@babel/preset-env": "^7.19.3",
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
@@ -41,6 +42,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.3",
     "hint": "^6.1.9",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
@@ -52,9 +54,7 @@
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.6.0",
-    "@babel/preset-env": "^7.19.3",
-    "html-loader": "^4.2.0"
+    "webpack-dev-server": "^4.6.0"
   },
   "dependencies": {
     "bootstrap": "^5.0.1",

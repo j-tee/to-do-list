@@ -55,7 +55,8 @@ todoList.forEach((task) => {
 element.innerHTML += '<li class="last-item"><button id="btn-delete" class="btn-clear">Clear all completed</button></li>';
 
 const spans = document.querySelectorAll('.task-action');
-[...spans].forEach((span) => {
+
+spans.forEach((span) => {
   span.addEventListener('click', () => {
     const id = span.getAttribute('id');
     const actionBtns = document.getElementsByClassName(id);
@@ -97,7 +98,7 @@ addBtn.addEventListener('click', () => {
 
 const checkBoxInputs = document.querySelectorAll('.checkbox-inputs');
 const deletelist = [];
-[...checkBoxInputs].forEach((btn) => {
+checkBoxInputs.forEach((btn) => {
   btn.addEventListener('change', (event) => {
     completed(btn.checked, btn.id);
   });
